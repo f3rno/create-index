@@ -6,7 +6,7 @@ const safeVariableName = (fileName) => {
   if (indexOfDot === -1) {
     return fileName;
   } else {
-    return fileName.slice(0, indexOfDot);
+    return _.camelCase(fileName.slice(0, indexOfDot));
   }
 };
 
